@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    flex-direction: center;
+    margin: 0;
+    padding: 0;
+    background-color: #2B3233;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*header*/
+
+.top{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #ffffff;
+    padding: 0rem 0 0;
+}
+.logo img{
+    height: 6rem;
+    width: auto;
+    margin: 0  0 0 0;
+}
+.menu-countainer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin: 0;
+    }
+.menu-countainer li a img{
+    width: 2rem;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5rem 0.5rem 2rem;
+}
+.menu-countainer .questions-icon{
+    width: 1.4rem;
+    height: auto;
+}
