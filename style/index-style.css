@@ -1,6 +1,6 @@
 body{
     display: flex;
-    flex-direction: center;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     background-color: #2B3233;
@@ -8,6 +8,9 @@ body{
     align-items: center;
     text-align: center;
 }
+
+
+/*Mobile First*/
 
 /*header*/
 
@@ -18,11 +21,11 @@ body{
     height: auto;
     justify-content: center;
     align-items: center;
-    border-bottom: 4px solid #ffffff;
+    border-bottom: 0.16rem solid #ffffff;
     padding: 0rem 0 0;
 }
 .logo img{
-    height: 6rem;
+    height: 5.6rem;
     width: auto;
     margin: 0  0 0 0;
 }
@@ -44,4 +47,20 @@ body{
 .menu-countainer .questions-icon{
     width: 1.4rem;
     height: auto;
+}
+/*Close header*/
+
+/*Main*/
+
+
+.texts .title{
+    font-size: 2rem;
+    text-align: center;
+}
+.texts{
+    display: flex;
+    font-size: 1.5rem;
+    margin: 1rem 2rem 3rem;
+    text-align:justify;
+    color: #ffffff;
 }
