@@ -45,4 +45,34 @@ body{
     width: 1.4rem;
     height: auto;
 }
+
 /*Close Header*/
+
+/*Main*/
+
+.contacts{
+    align-items: center;
+}
+.celphone-number{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    color: #ffffff;
+    font-size: 1.7rem;
+}
+.celphone-number img{
+    width: 3rem;
+    height: auto;
+}
+
+.email{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    color: #ffffff;
+    font-size: 1.51rem
+}
+.email img{
+    width: 3rem;
+    height: auto;
+}
