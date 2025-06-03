@@ -1,4 +1,4 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -10,11 +10,11 @@ body{
 }
 
 
+
 /*Mobile First*/
 
 /*header*/
-
-.top{
+.top {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -24,68 +24,87 @@ body{
     border-bottom: 0.16rem solid #ffffff;
     padding: 0rem 0 0;
 }
-.logo img{
+
+.logo img {
     height: 5.6rem;
     width: auto;
-    margin: 0  0 0 0;
+    margin: 0 0 0 0;
 }
-.menu-countainer ul{
+
+.menu-countainer ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0%;
     margin: 0;
-    }
-.menu-countainer li a img{
+}
+
+.menu-countainer li a img {
     width: 2rem;
     height: auto;
     justify-content: center;
     align-items: center;
     padding: 0 2.5rem 0.5rem 2rem;
 }
-.menu-countainer .questions-icon{
+
+.menu-countainer .questions-icon {
     width: 1.4rem;
     height: auto;
 }
+
+
 /*Close header*/
 
 /*Main*/
+main {
+    display: flex;
+    flex-direction: column;
+}
 
-
-.texts .title{
+.texts .title {
     font-size: 2rem;
     text-align: center;
 }
-.texts{
+
+.texts {
     display: flex;
+    flex-direction: column;
     font-size: 1.5rem;
     margin: 1rem 2rem 3rem;
-    text-align:justify;
+    text-align: justify;
     color: #ffffff;
 }
 
+.texts .examples img {
+    height: auto;
+    width: 21rem;
+    border-radius: 10%;
+}
 
 /*Close HEader*/
 
 /*Footer*/
-
-footer{
+footer {
     color: #00c1e5;
     display: flex;
     flex-direction: column;
-   background-color: #28393C; 
-   width: 100%;
-   padding: 2rem 0 1rem 0;
+    background-color: #28393C;
+    width: 100%;
+    padding: 2rem 0 1rem 0;
 }
 
-footer li{
+footer li {
     list-style: none;
 }
-footer li a{
-    color:#00c1e5;
+
+footer li a {
+    color: #00c1e5;
 }
-footer li a:hover{
-    color:rgb(20, 130, 204)
+
+footer li a:hover {
+    color: rgb(20, 130, 204)
 }
+
+
 /*Close footer*/
