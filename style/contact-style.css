@@ -44,9 +44,16 @@ body {
     align-items: center;
     padding: 0 2.5rem 0.5rem 2rem;
 }
+.menu-countainer li a img:hover {
+    width: 1.8rem;
+}
 
 .menu-countainer .questions-icon {
     width: 1.4rem;
+    height: auto;
+}
+.menu-countainer .questions-icon:hover {
+    width: 1.2rem;
     height: auto;
 }
 
