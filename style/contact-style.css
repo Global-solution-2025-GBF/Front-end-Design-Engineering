@@ -123,7 +123,7 @@ footer li a:hover {
 
 
 /*Tablets*/
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1023px) {
 
     body {
         height: 100%;
@@ -183,8 +183,9 @@ footer li a:hover {
         font-size: 2.7rem;
         padding: 0 0 3.8rem 0;
     }
+
     .celphone-number img,
-    .email img{
+    .email img {
         width: 4.5rem;
     }
 
@@ -198,3 +199,84 @@ footer li a:hover {
 }
 
 /*Close footer*/
+
+/*Desktop*/
+@media (min-width: 1024px) {
+
+    body {
+        height: 100%;
+        flex-direction: column;
+        padding: 2rem 0 0 0;
+    }
+
+    /* Header */
+    .top {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem;
+        width: 45%;
+    }
+
+    .logo img {
+        height: 11rem;
+        width: auto;
+    }
+
+    .menu-countainer ul {
+        flex-direction: row;
+        gap: 1rem;
+        padding-right: 1rem;
+    }
+
+    .menu-countainer li a img {
+        width: 4.3rem;
+        padding: 0 3rem 0.5rem;
+    }
+
+    .menu-countainer li a img:hover {
+        width: 2.6rem;
+        padding: 0 3.85rem;
+    }
+
+    .menu-countainer .questions-icon {
+        width: 3rem;
+    }
+
+    .menu-countainer .questions-icon:hover {
+        width: 2rem;
+        padding: 1.15rem 3.5rem;
+    }
+
+    /* Main */
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 4rem;
+        padding: 5rem 3rem 8rem;
+    }
+
+    .celphone-number,
+    .email {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 2.8rem;
+        gap: 2rem;
+    }
+
+    .celphone-number img,
+    .email img {
+        width: 5rem;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        padding: 4% 4rem;
+        font-size: 2rem;
+    }
+}
