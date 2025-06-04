@@ -64,3 +64,13 @@ body {
 
 /*Close header*/
 
+
+
+ /* Footer */
+footer {
+    color: #00c1e5;
+    background-color: #28393C;
+    width: 100%;
+    padding: 2rem 0 1rem 0;
+}
+/*close footer*/
