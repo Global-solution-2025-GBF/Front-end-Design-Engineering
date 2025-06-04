@@ -66,6 +66,7 @@ body {
 /*Main*/
 .cards {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 2.5rem;
     flex-wrap: wrap;
@@ -113,3 +114,80 @@ footer {
 }
 
 /*close footer*/
+
+@media (min-width: 600px) and (max-width: 1024px) {
+
+    /* Header */
+    .top {
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0 1rem 0;
+    }
+
+    .logo img {
+        height: 9rem;
+        width: auto;
+    }
+
+    .menu-countainer ul {
+        flex-direction: row;
+        gap: 10rem;
+        padding: 0 1.5rem 0 0;
+    }
+
+    .menu-countainer li a img {
+        width: 3.6rem;
+        padding: 0;
+    }
+
+    .menu-countainer li a img:hover {
+        width: 3rem;
+        padding: 0.313rem;
+    }
+
+    .menu-countainer .questions-icon:hover {
+        width: 1.5rem;
+        padding: 0 0 0 0.45rem ;
+    }
+
+
+    .menu-countainer .questions-icon {
+        width: 2rem;
+    }
+
+    /*Close header*/
+
+    /* Main */
+    .cards {
+        gap: 2rem;
+        margin: 3rem auto;
+        padding: 0 2rem;
+    }
+
+    .card {
+        width: 15rem;
+        font-size: 1.6rem;
+    }
+
+    .card:hover {
+        width: 15.3rem;
+        font-size: 1.65rem;
+    }
+
+    .card .photo {
+        width: 12.5rem;
+        padding: 0.3rem;
+    }
+
+    .icons img {
+        height: 4rem;
+        margin: 0.5rem;
+    }
+}
+/*Close main*/
+
+/*Footer*/
+    footer {
+        align-items: center;
+    }
+/*Close footer*/
