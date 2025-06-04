@@ -202,3 +202,95 @@ footer {
         align-items: center;
     }
 /*Close footer*/
+
+/*Desktop*/
+@media (min-width: 1025px) {
+
+    /* Header */
+    .top {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem;
+        width: 45%;
+    }
+
+    .logo img {
+        height: 11rem;
+        width: auto;
+    }
+
+    .menu-countainer ul {
+        flex-direction: row;
+        gap: 1rem;
+        padding-right: 1rem;
+    }
+
+    .menu-countainer li a img {
+        width: 4.3rem;
+        padding: 0 3rem 0.5rem;
+    }
+
+    .menu-countainer li a img:hover {
+        width: 2.6rem;
+        padding: 0 3.85rem;
+    }
+
+    .menu-countainer .questions-icon {
+        width: 3rem;
+    }
+
+    .menu-countainer .questions-icon:hover {
+        width: 2rem;
+        padding: 1.15rem 3.5rem;
+    }
+
+    /*close header*/
+
+
+    /*Main*/
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        margin: 5rem auto;
+        padding: 0 4rem;
+    }
+    .cards .title{
+        display: flex;
+    }
+
+    .card {
+        width: 16rem;
+        font-size: 1.7rem;
+    }
+
+    .card:hover {
+        width: 16.5rem;
+        font-size: 1.75rem;
+        padding: 1.1rem;
+    }
+
+    .card .photo {
+        width: 13.5rem;
+        padding: 0.3rem;
+    }
+
+    .icons img {
+        height: 4rem;
+        margin: 0.5rem;
+    }
+    
+    /*Close main*/
+
+
+  /* Footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 5rem;
+        font-size: 2rem;
+    }
+}
