@@ -131,7 +131,7 @@ footer a:hover {
     }
 }
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1023px) {
     .logo img {
         height: 9rem;
         width: auto;
@@ -186,11 +186,12 @@ footer a:hover {
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .top {
         flex-direction: row;
         justify-content: space-between;
         padding: 0 3rem;
+        width: 90%;
     }
 
     .logo img {
@@ -210,7 +211,8 @@ footer a:hover {
         justify-content: end;
         font-size: 1.7rem;
         width: 90%; 
-    }
+    }   
+
     .menu-countainer ul{
         display: flex;
         gap: 20px;
@@ -224,10 +226,22 @@ footer a:hover {
 
     .menu-countainer ul a:hover{
         color: #028ba3;
+        font-family: 1.9rem;
     }
 
     main {
         padding: 2rem 0 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    main div{
+        border-bottom: 0.2rem solid #00c1e5;
+        border-left: 2px solid #00c1e5;
+        border: 0rem 0rem 0.2rem 0.2rem solid #00c1e5;
+        padding: 10px;
+        border-radius: 3rem;
     }
 
     .texts {
