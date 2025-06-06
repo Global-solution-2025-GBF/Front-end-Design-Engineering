@@ -16,7 +16,6 @@ body {
     rgba(0, 7, 9, 1) 0%,
     rgba(0, 4, 6, 1) 100%
   );
-  width: 100%;
 }
 
 body {
@@ -30,11 +29,11 @@ body {
 /* Header */
 .top {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
+  width: 90%;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 0.16rem solid #fff;
+  
 }
 
 .logo img {
@@ -52,11 +51,12 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0;
+  gap: 1.5rem;
 }
 
 .menu-countainer-logo li a img {
   width: 2rem;
-  padding: 0 2rem 0.5rem;
+  height: 2rem;
   transition: width 0.3s;
 }
 
@@ -111,14 +111,11 @@ footer ul li a {
   .texts {
     font-size: 1rem;
   }
-
-
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
   .top {
     flex-direction: row;
-    justify-content: space-between;
     width: 90%;
     z-index: 10;
   }
@@ -129,12 +126,13 @@ footer ul li a {
   }
 
   .menu-countainer-logo ul {
-    gap: 10rem;
+    gap: 7rem;
     padding-right: 1.5rem;
   }
 
   .menu-countainer-logo li a img {
     width: 3.6rem;
+    height: 3.6rem;
     padding: 0;
   }
 
@@ -234,8 +232,9 @@ footer ul li a {
     transition: all 1.2s ease-in-out;
   }
 
-  .texts .examples img {
-   
+  .countainer-img img {
+    width: 80%;
+    height: 30rem;
   }
 
   footer {
@@ -255,7 +254,6 @@ footer ul li a {
     width: 90%;
     position: absolute;
     z-index: 10;
-    /* background-color: #00c3e507; */
   }
 
   .logo img {
@@ -352,24 +350,56 @@ footer ul li a {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    justify-content: center;
+    align-items: center;
   }
 
-  .texts .examples{
+  .texts .examples {
     width: 100%;
   }
 
   .texts .title {
     font-size: 3.5rem;
   }
+  
+  .countainer-texts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
-  .countainer-img{
+  .countainer-texts .texts .sobre-nos{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+
+  }
+
+  .countainer-texts .texts .examples{
+    width: 80%;
+    height: 100vh;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .countainer-img {
     width: 100%;
   }
 
-  .countainer-img img{
+  .countainer-img img {
     width: 45rem;
     height: 30rem;
   }
+
 
   footer {
     width: 100%;
