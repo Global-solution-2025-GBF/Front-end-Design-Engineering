@@ -1,283 +1,233 @@
 body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: #2B3233;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "Audiowide", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: linear-gradient(90deg, rgba(0, 7, 9, 1) 0%, rgba(0, 4, 6, 1) 100%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Audiowide", sans-serif;
 }
 
 /*Header*/
-
 .top {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0.16rem solid #ffffff;
-    padding: 0rem 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.2rem solid #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo img {
-    height: 5.6rem;
-    width: auto;
-    margin: 0 0 0 0;
+  height: 5.6rem;
+  width: auto;
 }
 
 .menu-countainer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .menu-countainer li a img {
-    width: 2rem;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2.5rem 0.5rem 2rem;
+  width: 2rem;
+  height: auto;
+  padding: 0 2.5rem 0.5rem 2rem;
+  transition: transform 0.3s ease;
 }
 
 .menu-countainer li a img:hover {
-    width: 1.8rem;
+  transform: scale(1.2);
 }
 
 .menu-countainer .questions-icon {
-    width: 1.4rem;
-    height: auto;
+  width: 1.4rem;
+  height: auto;
 }
 
 .menu-countainer .questions-icon:hover {
-    width: 1.2rem;
-    height: auto;
+  width: 1.2rem;
 }
-
-/*Close Header*/
 
 /*Main*/
+h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin: 2rem 0 0 0;
+}
 
 .contacts {
-    align-items: center;
-    padding: 0 0 12rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem 12rem 1rem;
+  gap: 2rem;
 }
 
-.celphone-number {
-    display: flex;
-    align-items: center;
-    margin: 2rem;
-    color: #ffffff;
-    font-size: 1.7rem;
+.contacts-item {
+  background-color: #1f2a2d;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  transition: transform 0.2s;
 }
 
-.celphone-number img {
-    width: 3rem;
-    height: auto;
+.contacts-item:hover {
+  transform: translateY(-5px);
 }
 
-.email {
-    display: flex;
-    align-items: center;
-    margin: 2rem;
-    color: #ffffff;
-    font-size: 1.51rem
+.contacts-item img {
+  width: 3rem;
+  height: auto;
 }
-
-.email img {
-    width: 3rem;
-    height: auto;
-}
-
-/*Close main*/
 
 /*Footer*/
-
 footer {
-    color: #00c1e5;
-    display: flex;
-    flex-direction: column;
-    background-color: #28393C;
-    width: 100%;
-    padding: 2rem 0 1rem 0;
+  color: #00c1e5;
+  display: flex;
+  flex-direction: column;
+  background-color: #28393C;
+  width: 100%;
+  padding: 2rem 0 1rem 0;
+  align-items: center;
 }
 
 footer li {
-    list-style: none;
+  list-style: none;
 }
 
 footer li a {
-    color: #00c1e5;
+  color: #00c1e5;
+  text-decoration: none;
 }
 
 footer li a:hover {
-    color: rgb(20, 130, 204)
+  color: rgb(20, 130, 204);
 }
 
-/*Close footer*/
+.social img {
+  width: 30px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
 
+.social img:hover {
+  transform: scale(1.2);
+}
 
-/*Tablets*/
+/* WhatsApp */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  z-index: 999;
+}
+
+/* Tablets */
 @media (min-width: 600px) and (max-width: 1023px) {
+  .top {
+    flex-direction: column;
+    padding: 0 0 1rem 0;
+  }
 
-    body {
-        height: 100%;
-        flex-direction: column;
-        padding: 1rem 0 0 0;
-    }
+  .logo img {
+    height: 9rem;
+  }
 
-    /* Header */
-    .top {
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0 0 1rem 0;
-    }
+  .menu-countainer ul {
+    flex-direction: row;
+    gap: 10rem;
+    padding: 0 1.5rem 0 0;
+  }
 
-    .logo img {
-        height: 9rem;
-    }
+  .menu-countainer li a img {
+    width: 3.6rem;
+    padding: 0;
+  }
 
-    .menu-countainer ul {
-        flex-direction: row;
-        gap: 10rem;
-        padding: 0 1.5rem 0 0;
-    }
+  .menu-countainer li a img:hover {
+    width: 3rem;
+  }
 
-    .menu-countainer li a img {
-        width: 3.6rem;
-        padding: 0;
-    }
+  .menu-countainer .questions-icon {
+    width: 2rem;
+  }
 
-    .menu-countainer li a img:hover {
-        width: 3rem;
-    }
+  .menu-countainer .questions-icon:hover {
+    width: 1.5rem;
+  }
 
-    .menu-countainer .questions-icon:hover {
-        width: 1.5rem;
-    }
+  .contacts-item {
+    flex-direction: column;
+    font-size: 2rem;
+    text-align: center;
+  }
 
-
-    .menu-countainer .questions-icon {
-        width: 2rem;
-    }
-
-    /* Main */
-    .contacts {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 3rem 0 7rem 0;
-    }
-
-    .celphone-number,
-    .email {
-        display: flex;
-        flex-direction: column;
-        font-size: 2.7rem;
-        padding: 0 0 3.8rem 0;
-    }
-
-    .celphone-number img,
-    .email img {
-        width: 4.5rem;
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: column;
-        align-items: center;
-        padding: 7%;
-        text-align: center;
-    }
+  .contacts-item img {
+    width: 4rem;
+  }
 }
 
-/*Close footer*/
-
-/*Desktop*/
+/* Desktop */
 @media (min-width: 1024px) {
+  .top {
+    padding: 0 3rem;
+    width: 80%;
+  }
 
-    body {
-        height: 100%;
-        flex-direction: column;
-        padding: 2rem 0 0 0;
-    }
+  .logo img {
+    height: 11rem;
+  }
 
-    /* Header */
-    .top {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 3rem;
-        width: 45%;
-    }
+  .menu-countainer ul {
+    flex-direction: row;
+    gap: 1rem;
+    padding-right: 1rem;
+  }
 
-    .logo img {
-        height: 11rem;
-        width: auto;
-    }
+  .menu-countainer li a img {
+    width: 4.3rem;
+    padding: 0 3rem 0.5rem;
+  }
 
-    .menu-countainer ul {
-        flex-direction: row;
-        gap: 1rem;
-        padding-right: 1rem;
-    }
+  .menu-countainer li a img:hover {
+    width: 2.6rem;
+    padding: 0 3.85rem;
+  }
 
-    .menu-countainer li a img {
-        width: 4.3rem;
-        padding: 0 3rem 0.5rem;
-    }
+  .menu-countainer .questions-icon {
+    width: 3rem;
+  }
 
-    .menu-countainer li a img:hover {
-        width: 2.6rem;
-        padding: 0 3.85rem;
-    }
+  .menu-countainer .questions-icon:hover {
+    width: 2rem;
+    padding: 1.15rem 3.5rem;
+  }
 
-    .menu-countainer .questions-icon {
-        width: 3rem;
-    }
+  .contacts-item {
+    font-size: 2.2rem;
+  }
 
-    .menu-countainer .questions-icon:hover {
-        width: 2rem;
-        padding: 1.15rem 3.5rem;
-    }
+  .contacts-item img {
+    width: 5rem;
+  }
 
-    /* Main */
-    .contacts {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 4rem;
-        padding: 5rem 3rem 8rem;
-    }
-
-    .celphone-number,
-    .email {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-size: 2.8rem;
-        gap: 2rem;
-    }
-
-    .celphone-number img,
-    .email img {
-        width: 5rem;
-    }
-
-    /* Footer */
-    footer {
-        flex-direction: column;
-        padding: 4%;
-        font-size: 2rem;
-    }
+  footer {
+    padding: 2rem;
+    font-size: 2rem;
+  }
 }
