@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQ - BYSW</title>
+    <title>FAQ | BYSW</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Audiowide&display=swap" />
     <link rel="stylesheet" href="./style/faq-style.css" />
+    <script src="./script/faq.js" defer></script>
 </head>
 
 <body>
@@ -20,17 +21,17 @@
             <nav class="menu-container" aria-label="Menu principal">
                 <ul>
                     <li>
-                        <a href="/contacts.html">
+                        <a href="./contacts.html">
                             <img src="./icons-header/telefone-branco.png" alt="Contato" />
                         </a>
                     </li>
                     <li>
-                        <a href="/index.html">
+                        <a href="index.html">
                             <img src="./icons-header/home-branco.png" alt="Início" />
                         </a>
                     </li>
                     <li>
-                        <a href="/faq.html">
+                        <a href="faq.html">
                             <img src="./icons-header/duvida-azul.png" alt="FAQ" class="questions-icon" />
                         </a>
                     </li>
@@ -42,53 +43,131 @@
     <main class="faq-section">
         <section class="faq-category">
             <h2>Abrigo</h2>
-            <ul>
-                <li>Onde tem um abrigo próximo da minha casa?</li>
-                <li>Abrigos disponíveis em SP</li>
-            </ul>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Onde tem um abrigo próximo da minha casa?
+                </button>
+                <div class="faq-answer">
+                    <p>Você pode consultar os abrigos mais próximos diretamente pelo nosso assistente virtual ou aplicativo. Basta informar o nome do seu bairro, e indicamos os locais disponíveis com base na sua localização e na situação atual da região.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Abrigos disponíveis em SP
+                </button>
+                <div class="faq-answer">
+                    <p>Nossa base é atualizada com informações da Defesa Civil e de parceiros municipais. Os principais abrigos ativos em São Paulo são escolas públicas, centros culturais e ginásios. Verifique os abrigos mais próximos no app ou com nosso chatbot informando seu bairro.</p>
+                </div>
+            </div>
             <div class="faq-feedback">
                 Essa informação foi útil?
-                <button>Sim</button>
-                <button>Não</button>
+                <button class="btn-feedback">Sim</button>
+                <button class="btn-feedback">Não</button>
             </div>
         </section>
 
         <section class="faq-category">
             <h2>Como Ajudar</h2>
-            <ul>
-                <li>Como ajudo uma pessoa em situação de perigo?</li>
-                <li>Como devo agir em uma inundação?</li>
-            </ul>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Como ajudo uma pessoa em situação de perigo?
+                </button>
+                <div class="faq-answer">
+                    <p>Se for seguro, leve a pessoa para um local seco e protegido. Se necessário, acione o resgate pelos números de emergência como o 193 (Bombeiros) ou 199 (Defesa Civil). Nunca coloque sua vida em risco. Informe o local e a situação com clareza..</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Como devo agir em uma inundação?
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        • Desligue a energia elétrica.<br>
+                        • Evite contato com a água.<br>
+                        • Vá para áreas mais altas e seguras.<br>
+                        • Se estiver de carro, não tente atravessar ruas alagadas.<br>
+                        • Leve documentos e itens essenciais com você.<br>
+                        Use o app BYSW para se informar sobre rotas e abrigos disponíveis.
+                    </p>
+                </div>
+            </div>
+
             <div class="faq-feedback">
                 Essa informação foi útil?
-                <button>Sim</button>
-                <button>Não</button>
+                <button class="btn-feedback">Sim</button>
+                <button class="btn-feedback">Não</button>
             </div>
         </section>
 
         <section class="faq-category">
             <h2>Emergência</h2>
-            <ul>
-                <li>Onde peço socorro?</li>
-                <li>Estou em uma área de alagamento, o que eu faço?</li>
-            </ul>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Onde peço socorro?
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Em emergências, entre em contato com:<br>
+                        • Bombeiros: 193<br>
+                        • Defesa Civil: 199<br>
+                        • SAMU: 192<br>
+                        Você também pode enviar sua localização pelo nosso app para encaminhamento da situação aos órgãos responsáveis 
+                        e receber orientações em tempo real.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Estou em uma área de alagamento, o que eu faço?
+                </button>
+                <div class="faq-answer">
+                    <p>Mantenha a calma. Evite contato com a água, pois pode estar contaminada ou esconder perigos. Suba para um local seguro, como o andar mais alto. Desligue a energia elétrica, se possível. Depois, entre em contato com a Defesa Civil ou consulte rotas de evacuação no BYSW.</p>
+                </div>
+            </div>
+
             <div class="faq-feedback">
                 Essa informação foi útil?
-                <button>Sim</button>
-                <button>Não</button>
+                <button class="btn-feedback">Sim</button>
+                <button class="btn-feedback">Não</button>
             </div>
         </section>
 
         <section class="faq-category">
             <h2>Dúvidas Gerais</h2>
-            <ul>
-                <li>Como o sistema define os níveis?</li>
-                <li>Como funciona a plataforma BYSW?</li>
-            </ul>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Como o sistema define os níveis?
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Os níveis de risco são definidos com base em dados meteorológicos, volume de chuvas e relatos da população. São quatro níveis:<br>
+                        🟢 Verde – sem risco<br>
+                        🟡 Amarelo – atenção<br>
+                        🟠 Laranja – risco moderado<br>
+                        🔴 Vermelho – risco alto<br>
+                        Esses níveis orientam as ações preventivas e os alertas enviados.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Como funciona a plataforma BYSW?
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        A BYSW conecta tecnologia e cuidado social. Recebemos relatos da população, processamos dados climáticos e indicamos rotas, alertas e abrigos. Também temos um chatbot para tirar dúvidas, avisos por bairro e ferramentas que auxiliam em decisões durante situações de risco.
+                    </p>
+                </div>
+            </div>
+
             <div class="faq-feedback">
                 Essa informação foi útil?
-                <button>Sim</button>
-                <button>Não</button>
+                <button class="btn-feedback">Sim</button>
+                <button class="btn-feedback">Não</button>
             </div>
         </section>
     </main>
