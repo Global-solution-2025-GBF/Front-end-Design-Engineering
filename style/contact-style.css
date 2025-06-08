@@ -1,34 +1,47 @@
-
-body {
-  display: flex;
-  flex-direction: column;
+/* Reset */
+* {
   margin: 0;
-  background: linear-gradient(90deg, rgba(0, 7, 9, 1) 0%, rgba(0, 4, 6, 1) 100%);
-  justify-content: flex-start; /* ou 'center' se quiser centralizar verticalmente */
-  align-items: center;
-  text-align: center;
-  font-family: "Audiowide", sans-serif;
-  width: 100%;
-  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
   overflow-x: hidden;
+  font-family: "Audiowide", sans-serif;
+  background-color: #00060A;
+  color: white;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
-html {
-  box-sizing: border-box;
+/* Fundo*/
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, #00c1e510 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  opacity: 0.2;
+  
 }
-
- ::before, ::after {
-  box-sizing: inherit;
+/* Layout geral */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #00060A, #001418);
 }
 
 /*Header*/
 header {
-  width: 95%;
-  border-bottom: 2px solid #ffffff;
+  width: 90%;
+  border-bottom: 2px solid #00c1e5;
 }
+
 
 .top {
   display: flex;
@@ -49,7 +62,7 @@ header {
 
 .menu-container ul {
   display: flex;
-  flex-direction: row; /* mantém os ícones em linha */
+  flex-direction: row;
   gap: 2rem;
   padding: 0;
   margin: 0;
@@ -58,37 +71,77 @@ header {
   align-items: center;
 }
 
-
-
-.menu-countainer li {
+.menu-container li {
   padding: 0.5rem;
 }
 
-.menu-countainer li a img {
+.menu-container li a img {
   width: 2.5rem;
   height: auto;
   padding: 0;
   transition: transform 0.3s ease;
 }
 
-.menu-countainer li a img:hover {
+.menu-container li a img:hover {
   transform: scale(1.2);
 }
 
-.menu-countainer .questions-icon {
+.menu-container .questions-icon {
   width: 1.4rem;
   height: auto;
 }
 
-.menu-countainer .questions-icon:hover {
-  width: 1.2rem;
+.menu-container .questions-icon:hover {
+  transform: scale(1.2);
 }
 
 /*Main*/
 h1 {
+  font-family: 'Audiowide', sans-serif;
   color: #ffffff;
-  font-size: 2.5rem;
-  margin: 2rem 0 0 0;
+  font-size: 2.4rem;
+  margin-top: 4rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(0, 193, 229, 0.15);
+}
+.contacts-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.contacts-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: linear-gradient(145deg, #1f2a2d, #101718);
+  padding: 2.5rem;
+  margin: 1rem 0;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 193, 229, 0.1);
+  transition: all 0.3s ease;
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.contacts-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(0, 193, 229, 0.25);
+}
+
+.contacts-card img {
+  width: 3rem;
+  height: auto;
 }
 
 .contacts {
@@ -99,7 +152,7 @@ h1 {
   gap: 2rem;
 }
 
-.contacts-item {
+.contacts-box {
   background-color: #1f2a2d;
   padding: 1rem;
   border-radius: 12px;
@@ -113,25 +166,23 @@ h1 {
   transition: transform 0.2s;
 }
 
-.contacts-item:hover {
+.contacts:hover {
   transform: translateY(-5px);
 }
 
-.contacts-item img {
+.contacts img {
   width: 3rem;
   height: auto;
 }
 
 /*Footer*/
 footer {
+  background-color: #1a2b2e;
   color: #00c1e5;
-  display: flex;
-  flex-direction: column;
-  background-color: #28393C;
+  text-align: center;
+  padding: 2rem 1rem;
   width: 100%;
-  padding: 2rem 0 1rem 0;
-  align-items: center;
-  overflow: hidden;
+  margin-top: auto;
 }
 
 footer li {
@@ -143,8 +194,9 @@ footer li a {
   text-decoration: none;
 }
 
-footer li a:hover {
-  color: rgb(20, 130, 204);
+footer a:hover {
+  color: #0ff;
+  text-shadow: 0 0 6px #0ff;
 }
 
 @media (max-width: 599px) {
@@ -159,19 +211,95 @@ footer li a:hover {
     height: auto;
   }
 
-  .menu-countainer ul {
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0;
+  .menu-container {
+    width: 100%;
   }
 
-  .menu-countainer li {
+  .menu-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .menu-container li {
     padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .menu-countainer li a img {
+  .menu-container li a img,
+  .menu-container .questions-icon {
     width: 2.5rem;
-    padding: 0;
+    height: 2.5rem;
+    transition: transform 0.3s ease;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-container li a img:hover,
+  .menu-container .questions-icon:hover {
+    transform: scale(1.2);
+    z-index: 10;
+  }
+
+  h1 {
+    font-family: 'Audiowide', sans-serif;
+    color: #ffffff;
+    font-size: 2.4rem;
+    margin-top: 4rem;
+    text-shadow: none;
+    letter-spacing: 1px;
+  }
+
+  .contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .contacts-card img {
+  width: clamp(2rem, 5vw, 3rem);
+  }
+
+
+  .contacts-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: #1f2a2d;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 193, 229, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    height: auto;
+  }
+
+  .contacts-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 193, 229, 0.2);
+  }
+
+  .contacts-card img {
+    width: 3rem;
+    height: auto;
   }
 }
 
@@ -185,10 +313,19 @@ footer li a:hover {
     padding: 1rem;
     flex-wrap: wrap;
   }
-
+  .menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .logo img {
     max-width: 50%;
     height: auto;
+  }
+
+  .menu-container {
+    width: 100%;
   }
 
   .menu-container ul {
@@ -196,7 +333,6 @@ footer li a:hover {
     flex-direction: row;
     gap: 2rem;
     list-style: none;
-    padding: 0;
     margin: 0;
     align-items: center;
     justify-content: center;
@@ -204,7 +340,7 @@ footer li a:hover {
 
   .menu-container li a img {
     width: 2.6rem;
-    padding: 0 3rem 0.5rem;
+    padding: 0 ;
     transition: transform 0.3s ease;
   }
 
@@ -214,7 +350,6 @@ footer li a:hover {
 
   .menu-container .questions-icon {
     width: 2.6rem;
-    padding: 0 3rem 0.5rem;
     transition: transform 0.3s ease;
   }
 
@@ -222,20 +357,23 @@ footer li a:hover {
     transform: scale(1.2);
   }
 
-
-  .contacts-item {
-    flex-direction: column;
-    font-size: 2rem;
-    text-align: center;
+  .contacts-wrapper,
+  .contacts {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem 1rem;
+    margin: 0 auto;
   }
 
-  .contacts-item img {
+  .contacts img {
     width: 4rem;
   }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+
+
   .top {
     display: flex;
     justify-content: center;
@@ -245,41 +383,110 @@ footer li a:hover {
     flex-wrap: wrap;
   }
 
+  header{
+    width: 90%;
+  }
+
   .logo img {
-    max-width: 50%;
-    height: auto;
+    height: 5.6rem;
+  }
+
+  .menu-container {
+    width: 100%;
   }
 
   .menu-container ul {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
-    list-style: none;
     padding: 0;
     margin: 0;
+    list-style: none;
+  }
+
+  .menu-container li {
+    padding: 0.5rem;
+    display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  
-  .menu-container li a img {
-    width: 2.6rem;
-    padding: 0 3rem 0.5rem;
-    transition: transform 0.3s ease;
-  }
-
-  .menu-container li a img:hover {
-    transform: scale(1.1);
-  }
-
+  .menu-container li a img,
   .menu-container .questions-icon {
-    width: 2.6rem;
-    padding: 0 3rem 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     transition: transform 0.3s ease;
+    display: block;
+    position: relative;
+    z-index: 1;
   }
 
+  .menu-container li a img:hover,
   .menu-container .questions-icon:hover {
     transform: scale(1.2);
+    z-index: 10;
   }
-  
+
+  .contacts-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1e1e1e;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  width: fit-content;
+  margin: auto;
+}
+  .contacts-wrapper,
+  .contacts {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem 1rem;
+    margin: 0 auto;
   }
+
+  .contacts-box img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+  }
+  .contacts-container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+footer {
+  background-color: #1a2b2e;
+  color: #00c1e5;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+}
