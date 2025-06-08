@@ -1,3 +1,4 @@
+
 body {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,10 @@ body {
   height: 100%;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -20,6 +25,11 @@ html {
 }
 
 /*Header*/
+header {
+  width: 95%;
+  border-bottom: 2px solid #ffffff;
+}
+
 .top {
   display: flex;
   flex-direction: column; 
@@ -37,14 +47,18 @@ html {
   width: auto;
 }
 
-.menu-countainer ul {
-  list-style: none;
+.menu-container ul {
   display: flex;
+  flex-direction: row; /* mantém os ícones em linha */
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
 }
+
+
 
 .menu-countainer li {
   padding: 0.5rem;
@@ -164,36 +178,50 @@ footer li a:hover {
 /* Tablets */
 @media (min-width: 600px) and (max-width: 1023px) {
   .top {
-    flex-direction: column;
-    padding: 0 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
   }
 
   .logo img {
-    height: 9rem;
+    max-width: 50%;
+    height: auto;
   }
 
-  .menu-countainer ul {
+  .menu-container ul {
+    display: flex;
     flex-direction: row;
-    gap: 10rem;
-    padding: 0 1.5rem 0 0;
-  }
-
-  .menu-countainer li a img {
-    width: 3.6rem;
+    gap: 2rem;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
   }
 
-  .menu-countainer li a img:hover {
-    width: 3rem;
+  .menu-container li a img {
+    width: 2.6rem;
+    padding: 0 3rem 0.5rem;
+    transition: transform 0.3s ease;
   }
 
-  .menu-countainer .questions-icon {
-    width: 2rem;
+  .menu-container li a img:hover {
+    transform: scale(1.1);
   }
 
-  .menu-countainer .questions-icon:hover {
-    width: 1.5rem;
+  .menu-container .questions-icon {
+    width: 2.6rem;
+    padding: 0 3rem 0.5rem;
+    transition: transform 0.3s ease;
   }
+
+  .menu-container .questions-icon:hover {
+    transform: scale(1.2);
+  }
+
 
   .contacts-item {
     flex-direction: column;
@@ -209,43 +237,49 @@ footer li a:hover {
 /* Desktop */
 @media (min-width: 1024px) {
   .top {
-    flex-direction: column; 
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
+    flex-wrap: wrap;
   }
 
   .logo img {
-    height: 11rem;
+    max-width: 50%;
+    height: auto;
   }
 
-  header {
-    width: 95%;
-    border-bottom: 2px solid #ffffff;
-  }
-
-  .menu-countainer ul {
+  .menu-container ul {
+    display: flex;
     flex-direction: row;
-    gap: 5rem;
-    padding-right: 1rem;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
   }
 
-  .menu-countainer li a img {
-    width: 4.3rem;
-    padding: 0 3rem 0.5rem;
-  }
-
-  .menu-countainer li a img:hover {
+  
+  .menu-container li a img {
     width: 2.6rem;
-    padding: 0 3.85rem;
+    padding: 0 3rem 0.5rem;
+    transition: transform 0.3s ease;
   }
 
-  .menu-countainer .questions-icon {
-    width: 4rem;
+  .menu-container li a img:hover {
+    transform: scale(1.1);
   }
 
-  .menu-countainer .questions-icon:hover {
-    width: 2rem;
-    padding: 1.15rem 3.5rem;
+  .menu-container .questions-icon {
+    width: 2.6rem;
+    padding: 0 3rem 0.5rem;
+    transition: transform 0.3s ease;
   }
-}
+
+  .menu-container .questions-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  }
