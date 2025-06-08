@@ -10,9 +10,10 @@ html, body {
   font-family: "Audiowide", sans-serif;
   background-color: #00060A;
   color: white;
+  font-size: clamp(14px, 1.5vw, 18px);
 }
 
-/* Fundo com efeito futurista */
+/* Fundo*/
 body::before {
   content: '';
   position: fixed;
@@ -22,9 +23,8 @@ body::before {
   background-size: 50px 50px;
   z-index: -1;
   opacity: 0.2;
-  animation: move 60s linear infinite;
+  
 }
-
 /* Layout geral */
 body {
   display: flex;
@@ -36,46 +36,59 @@ body {
   background: linear-gradient(120deg, #00060A, #001418);
 }
 
-/* Header */
-.top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95%;
+/*Header*/
+header {
+  width: 90%;
   border-bottom: 2px solid #00c1e5;
-  padding: 1rem 0;
 }
-
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
 .logo img {
   height: 5.6rem;
 }
 
-.menu-container {
-  background-color: rgba(0, 193, 229, 0.1);
-  backdrop-filter: blur(6px);
-  border-radius: 1rem;
-  padding: 0.5rem 2rem;
-  margin-top: 1rem;
-}
+  .menu-container {
+    width: 100%;
+  }
 
-.menu-container ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
+  .menu-container ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 
-.menu-container li a img {
-  width: 2rem;
-  transition: transform 0.3s ease;
-}
+  .menu-container li {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.menu-container li a img:hover {
-  transform: scale(1.1);
-}
+  .menu-container li a img,
+  .menu-container .questions-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.3s ease;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
 
-.questions-icon {
-  width: 1.4rem;
-}
+  .menu-container li a img:hover,
+  .menu-container .questions-icon:hover {
+    transform: scale(1.2);
+    z-index: 10;
+  }
 
 /* FAQ Section */
 .faq-section {
