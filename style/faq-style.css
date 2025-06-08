@@ -13,6 +13,8 @@ html, body {
   font-size: clamp(14px, 1.5vw, 18px);
 }
 
+
+
 /* Fundo*/
 body::before {
   content: '';
@@ -156,6 +158,50 @@ header {
   background-color: #00f7ff;
   transform: scale(1.05);
 }
+.faq-answer {
+    display: none;
+    padding: 0.8rem 1rem;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    background-color: #29293d;
+    border-left: 4px solid #007bff;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.faq-answer.active {
+    display: block;
+}
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #1f1f2e;
+    color: #ffffff;
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question:hover,
+.faq-question:focus {
+    background-color: #2a2a3d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+.faq-question[aria-expanded="true"] {
+    background-color: #007bff; 
+    color: #fff;
+}
+
+
 
 /* Footer */
 footer {
