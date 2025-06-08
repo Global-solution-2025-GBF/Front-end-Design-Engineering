@@ -1,85 +1,171 @@
-body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    background-color: #2B3233;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "Audiowide", sans-serif;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*header*/
+html, body {
+  overflow-x: hidden;
+  font-family: "Audiowide", sans-serif;
+  background-color: #00060A;
+  color: white;
+}
 
+/* Fundo com efeito futurista */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle, #00c1e510 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  opacity: 0.2;
+  animation: move 60s linear infinite;
+}
+
+/* Layout geral */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #00060A, #001418);
+}
+
+/* Header */
 .top {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0.16rem solid #ffffff;
-    padding: 0rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  border-bottom: 2px solid #00c1e5;
+  padding: 1rem 0;
 }
 
 .logo img {
-    height: 5.6rem;
-    width: auto;
-    margin: 0 0 0 0;
+  height: 5.6rem;
 }
 
-.menu-countainer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    margin: 0;
+.menu-container {
+  background-color: rgba(0, 193, 229, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
 }
 
-.menu-countainer li a img {
-    width: 2rem;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2.5rem 0.5rem 2rem;
-}
-.menu-countainer li a img:hover {
-    width: 1.8rem;
+.menu-container ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
-.menu-countainer .questions-icon {
-    width: 1.4rem;
-    height: auto;
-}
-.menu-countainer .questions-icon:hover {
-    width: 1.2rem;
-    height: auto;
+.menu-container li a img {
+  width: 2rem;
+  transition: transform 0.3s ease;
 }
 
-/*Close header*/
+.menu-container li a img:hover {
+  transform: scale(1.1);
+}
 
-/*Footer*/
+.questions-icon {
+  width: 1.4rem;
+}
+
+/* FAQ Section */
+.faq-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq-category {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 193, 229, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 193, 229, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.faq-category h2 {
+  color: #00c1e5;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #00c1e5, 0 0 16px #007e99;
+}
+
+.faq-category ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.faq-category li {
+  margin-bottom: 0.6rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-category li:hover {
+  transform: translateX(10px);
+  color: #0ff;
+}
+
+/* Feedback */
+.faq-feedback {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.faq-feedback button {
+  background-color: #00c1e5;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.faq-feedback button:hover {
+  background-color: #00f7ff;
+  transform: scale(1.05);
+}
+
+/* Footer */
 footer {
-    color: #00c1e5;
-    display: flex;
-    flex-direction: column;
-    background-color: #28393C;
-    width: 100%;
-    padding: 2rem 0 1rem 0;
+  background-color: #1a2b2e;
+  color: #00c1e5;
+  text-align: center;
+  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: auto;
 }
 
-footer li {
-    list-style: none;
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
-footer li a {
-    color: #00c1e5;
+footer a {
+  color: #00c1e5;
+  text-decoration: none;
 }
 
-footer li a:hover {
-    color: rgb(20, 130, 204)
+footer a:hover {
+  color: #0ff;
+  text-shadow: 0 0 6px #0ff;
 }
-
-/*Close footer*/
