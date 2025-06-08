@@ -143,6 +143,11 @@ main {
   background-color: #01313a;
   border-radius: 1.5rem;
   gap: 0.4rem;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-0.3125rem); 
+  box-shadow: 0 0 50px rgba(0, 193, 229, 0.25);
 }
 
 .card img {
@@ -153,7 +158,12 @@ main {
 .icons a img {
   width: 2rem;
   height: 2rem;
+  transition: transform 0.2s;
 }
+.icons img:hover {
+  transform: scale(1.1);
+}
+
 .name {
   font-size: 1.5rem;
 }
